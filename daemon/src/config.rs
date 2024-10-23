@@ -341,8 +341,8 @@ impl Config {
                             x.0,
                             y.0,
                             match x.1.sorting.unwrap() {
-                                Sorting::GroupedRandom { group } => group,
-                                _ => unreachable!(),
+                                Sorting::GroupedRandom { group } => format!("{}", group),
+                                s => format!("{:?}", s)
                             }
                         );
                         errored_list.push(j);
